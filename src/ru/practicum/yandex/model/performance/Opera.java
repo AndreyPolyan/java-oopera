@@ -6,7 +6,7 @@ import ru.practicum.yandex.model.workers.Director;
 
 import java.util.List;
 
-public class Opera extends MusicalShow{
+public class Opera extends MusicalShow {
     private int choirSize;
 
     public Opera(int duration, Director director, List<Actor> listOfActors, String title, Composer musicAuthor, String librettoText, int choirSize) {
