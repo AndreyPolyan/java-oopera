@@ -108,6 +108,10 @@ public class Show {
         }
     }
 
+    public void setListOfActors(List<Actor> listOfActors) {
+        this.listOfActors = listOfActors;
+    }
+
     public void removeDirector() {
         if (director != null) {
             director.decrementNumberOfShows();

@@ -10,15 +10,19 @@ import java.util.List;
 public class Ballet extends MusicalShow {
     private Choreographer choreographer;
 
-    public Ballet(int duration, Director director, List<Actor> listOfActors, String title, Composer musicAuthor, String librettoText, Choreographer choreographer) {
-        super(duration, director, listOfActors, title, musicAuthor, librettoText);
-        this.choreographer = choreographer;
-    }
-
-    public Ballet(int duration, Director director, String title, Composer musicAuthor, String librettoText, Choreographer choreographer) {
+    public Ballet(int duration, Director director, String title, Composer musicAuthor,
+                  String librettoText, Choreographer choreographer) {
         super(duration, director, title, musicAuthor, librettoText);
         this.choreographer = choreographer;
     }
+
+    public Ballet(int duration, Director director, List<Actor> listOfActors,
+                  String title, Composer musicAuthor, String librettoText, Choreographer choreographer) {
+        this(duration, director, title, musicAuthor, librettoText, choreographer);
+        this.setListOfActors(listOfActors);
+    }
+
+
 
     public Choreographer getChoreographer() {
         return choreographer;

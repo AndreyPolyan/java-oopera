@@ -10,16 +10,18 @@ public class MusicalShow extends Show {
     private Composer musicAuthor;
     private String librettoText;
 
-    public MusicalShow(int duration, Director director, List<Actor> listOfActors, String title, Composer musicAuthor, String librettoText) {
-        super(duration, director, listOfActors, title);
-        this.musicAuthor = musicAuthor;
-        this.librettoText = librettoText;
-    }
+
 
     public MusicalShow(int duration, Director director, String title, Composer musicAuthor, String librettoText) {
         super(duration, director, title);
         this.musicAuthor = musicAuthor;
         this.librettoText = librettoText;
+    }
+
+    public MusicalShow(int duration, Director director, List<Actor> listOfActors,
+                       String title, Composer musicAuthor, String librettoText) {
+        this(duration, director, title, musicAuthor, librettoText);
+        this.setListOfActors(listOfActors);
     }
 
     public Composer getMusicAuthor() {
